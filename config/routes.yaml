@@ -1,3 +1,17 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+# Adicionando a rotas dos metodos do controller, sem parametros e com parametros.
+
+hello:
+    path: /hello
+    controller: App\Controller\HelloController::index
+
+# helloname: 
+#     path: /helloname/{name} # parametro
+#     Controller: App\Controller\HelloController::helloname
+
+#Forma correta para adicionar a rota.
+helloname:
+    path:     /helloname/{name}
+    defaults: { _controller: App\Controller\HelloController::helloname }
